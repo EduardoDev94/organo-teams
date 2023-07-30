@@ -5,7 +5,41 @@ import Time from './components/Time';
 
 
 function App() {
-const [jogadores, setJogadores] = useState([])
+  const times = [
+    {
+      nome:'Real Madrid',
+      primaryColor:'#d9f7e9',
+      secondColor:'#57c278',
+    },    
+    {
+      nome:'Barcelona',
+      primaryColor:'#d9f7e9',
+      secondColor:'#57c278',
+    },
+    {
+      nome:'Bayern de Munique',
+      primaryColor:'#d9f7e9',
+      secondColor:'#57c278',
+    },
+    {
+      nome:'Milan',
+      primaryColor:'#d9f7e9',
+      secondColor:'#57c278',
+    },
+    {
+      nome:'Inter de Milão',
+      primaryColor:'#d9f7e9',
+      secondColor:'#57c278',
+    },
+    {
+      nome:'Cruzeiro EC',
+      primaryColor:'#d9f7e9',
+      secondColor:'#57c278',
+    }
+   ]
+
+
+  const [jogadores, setJogadores] = useState([])
   const aoNovoJogadorCadastrado = (jogador) =>{
     console.log(jogador)
     setJogadores([...jogadores, jogador])
@@ -14,12 +48,7 @@ const [jogadores, setJogadores] = useState([])
     <div className="App">
       <Banner/>
       <Formulario aoJogadorCadastrado={jogador => aoNovoJogadorCadastrado(jogador)}/>
-      <Time nome="Real Madrid" />
-      <Time nome="Barcelona" />
-      <Time nome="Milan"/>
-      <Time nome="Bayern de Munique"/>
-      <Time nome="Inter de Milão" />
-      <Time nome="Cruzeiro" />
+      {times.map(time =><Time key={time.nome} nome={time.nome} primaryColor={time.primaryColor} secondColor={time.secondColor} />)}
     </div>
   );
 }
