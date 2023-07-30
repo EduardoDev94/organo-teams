@@ -5,13 +5,18 @@ import Button from '../Button'
 import { useState } from 'react'
 
 
-const Formulario = () => {
+const Formulario = (props) => {
     const times = [
         'Real Madrid', 'Barcelona', 'Bayern de Munique', 'Milan', 'Inter de Milão', 'Cruzeiro EC'
     ]
     const formSubmited = (event) => {
         event.preventDefault()
-        console.log('form submetido', nome,position,imagem,time)
+        props.aoJogadorCadastrado({
+            nome: nome,
+            position: position,
+            imagem: imagem,
+            time: time
+        })
     }
     
     const [nome, setNome] = useState('')
@@ -31,7 +36,6 @@ const Formulario = () => {
                     label="Nome"
                     placeholder="Digite o nome do jogador:"
                 />
-
                 <CampoTexto
                     valor={position}
                     aoAlterado={valor => setPosition(valor) }
@@ -45,10 +49,9 @@ const Formulario = () => {
                 <DropdownList 
                    label="Time" 
                    itens={times} 
-                   valor = {time}
+                   valor={time}
                    aoAlterado={valor =>setTime(valor)}
-                   />
-                   
+                   />   
                 <Button>  Criar Card </Button>
             </form>
         </section>
