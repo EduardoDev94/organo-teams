@@ -8,33 +8,33 @@ function App() {
   const times = [
     {
       nome:'Real Madrid',
-      primaryColor:'#d9f7e9',
-      secondColor:'#57c278',
+      primaryColor:'#FFFF00',
+      secondColor:'#FFFFFF',
     },    
     {
       nome:'Barcelona',
-      primaryColor:'#d9f7e9',
-      secondColor:'#57c278',
+      primaryColor:'#00008B',
+      secondColor:'#8B0000',
     },
     {
       nome:'Bayern de Munique',
-      primaryColor:'#d9f7e9',
-      secondColor:'#57c278',
+      primaryColor:'#FF0000',
+      secondColor:'#FFFFFF',
     },
     {
       nome:'Milan',
-      primaryColor:'#d9f7e9',
-      secondColor:'#57c278',
+      primaryColor:'#000000',
+      secondColor:'#8B0000',
     },
     {
       nome:'Inter de Milão',
-      primaryColor:'#d9f7e9',
-      secondColor:'#57c278',
+      primaryColor:'#000000',
+      secondColor:'#00008B',
     },
     {
       nome:'Cruzeiro EC',
-      primaryColor:'#d9f7e9',
-      secondColor:'#57c278',
+      primaryColor:'#0000FF',
+      secondColor:'#FFFFFF',
     }
    ]
 
