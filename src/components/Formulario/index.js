@@ -6,9 +6,7 @@ import { useState } from 'react'
 
 
 const Formulario = (props) => {
-    const times = [
-        'Real Madrid', 'Barcelona', 'Bayern de Munique', 'Milan', 'Inter de Milão', 'Cruzeiro EC'
-    ]
+
     const formSubmited = (event) => {
         event.preventDefault()
         props.aoJogadorCadastrado({
@@ -48,7 +46,7 @@ const Formulario = (props) => {
                     placeholder="Digite o endereço da imagem" />
                 <DropdownList 
                    label="Time" 
-                   itens={times} 
+                   itens={props.times} 
                    valor={time}
                    aoAlterado={valor =>setTime(valor)}
                    />   
