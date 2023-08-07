@@ -7,7 +7,10 @@ const Time = (props) =>{
     return (
         <section className='time' style={css}>
             <h3 style={{borderColor:props.primaryColor}} >{props.nome}</h3>
-            <Jogador/>
+           <div className='jogadores'>
+
+            {props.jogadores.map(jogador => <Jogador nome={jogador.nome} position={jogador.position} imagem={jogador.imagem} />) }
+           </div>
         </section>
     )
 }

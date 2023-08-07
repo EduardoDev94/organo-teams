@@ -50,7 +50,13 @@ function App() {
       <Banner/>
       <Formulario times={times.map(time => time.nome)} aoJogadorCadastrado={jogador => aoNovoJogadorCadastrado(jogador)}/>
      
-      {times.map(time =><Time key={time.nome} nome={time.nome} primaryColor={time.primaryColor} secondColor={time.secondColor} />)}
+      {times.map(time =><Time 
+      key={time.nome} 
+      nome={time.nome} 
+      primaryColor={time.primaryColor} 
+      secondColor={time.secondColor} 
+      jogadores={jogadores.filter(jogador =>jogador.time === time.nome)} 
+      />)}
     </div>
   );
 }
