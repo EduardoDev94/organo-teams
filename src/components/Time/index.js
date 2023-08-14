@@ -5,13 +5,14 @@ const Time = (props) =>{
     const css = {backgroundColor: props.secondColor}
    
     return (
-        <section className='time' style={css}>
-            <h3 style={{borderColor:props.primaryColor}} >{props.nome}</h3>
+      (props.jogadores.length > 0) ?  <section className='time' style={css}>
+            <h3 style={{borderColor: props.primaryColor}} >{props.nome}</h3>
            <div className='jogadores'>
 
-            {props.jogadores.map(jogador => <Jogador nome={jogador.nome} position={jogador.position} imagem={jogador.imagem} />) }
+            {props.jogadores.map(jogador => <Jogador corDeFund={props.primaryColor} nome={jogador.nome} position={jogador.position} key={jogador.nome} imagem={jogador.imagem} />) }
            </div>
         </section>
+        : ''
     )
 }
 

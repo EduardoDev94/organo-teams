@@ -15,6 +15,10 @@ const Formulario = (props) => {
             imagem: imagem,
             time: time
         })
+        setNome('')
+        setPosition('')
+        setImage('')
+        setTime('')
     }
     
     const [nome, setNome] = useState('')
@@ -47,7 +51,7 @@ const Formulario = (props) => {
                 <DropdownList 
                    label="Time" 
                    itens={props.times} 
-                   valor={time}
+                   value={time}
                    aoAlterado={valor =>setTime(valor)}
                    />   
                 <Button>  Criar Card </Button>
